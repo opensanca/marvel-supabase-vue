@@ -1,21 +1,27 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-const Dashboard = () => import('../views/dashboard/index.vue');
-const Character = () => import('../views/character/index.vue');
+const Characters = () => import('../views/character/CharacterList.vue');
+const NewCharacter = () => import('../views/character/CharacterNew.vue');
+const CharacterProfile = () => import('../views/character/CharacterProfile.vue');
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Dashboard',
-    component: Dashboard,
+    name: 'Characters',
+    component: Characters,
+  },
+  {
+    path: '/personagem/:id',
+    name: 'CharacterProfile',
+    component: CharacterProfile,
   },
   {
     path: '/novo',
-    name: 'Character',
-    component: Character,
+    name: 'NewCharacter',
+    component: NewCharacter,
   },
 ];
 
