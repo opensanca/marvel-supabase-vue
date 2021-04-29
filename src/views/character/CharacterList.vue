@@ -19,7 +19,7 @@
         :key="character.id">
         <div class="card" style="width: 18rem;">
           <img
-            src="../../assets/marvel.png"
+            src="../../assets/marvel-heroes.jpg"
             class="card-img-top"
             alt="Venon">
           <div class="card-body">
@@ -27,15 +27,20 @@
               {{character.name}}
             </h5>
             <p class="card-text">{{character.minibio}}</p>
-            <button
-              @click="goToCharacter(character.id)"
-              class="btn btn-primary">Detalhes
-            </button>
-
-            <button
-              @click="removeCharacter(character.id)"
-              class="btn btn-warning mr-5">Remover
-            </button>
+            <div class="row">
+              <div class="col">
+                 <button
+                  @click="goToCharacter(character.id)"
+                  class="btn btn-primary">Detalhes
+                </button>
+              </div>
+              <div class="col d-flex justify-content-end">
+                <button
+                  @click="removeCharacter(character.id)"
+                  class="btn btn-warning mr-5">Remover
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

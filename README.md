@@ -32,19 +32,13 @@ Na parte do Vue.js iremos adentrar sobre:
  - [x] Rotas (Vue-router)
  - [x] API Client(Axios e Supabase)
 
-## Docs :computer:
+## Docs ::exclamation::
 Foi criado dentro do diretório `docs` toda a documentação sobre como foi criado esse webApp
 seguindo as diretrizes do prótotipo abaixo.
 
-- Setup
-- Structure
-- Create
-- Supabase
-- Criar Personagem
-- Visualizar Personagem criado por ID
-- Remover Personagem
+![](src/assets/demo/marvel-supabase-template.gif)
 
-## Docs :computer:
+## Docs :pushpin:
 
 Caso tenha interesse em executar esse prótotipo na sua máquina, precisa seguir os passos abaixo:
 
