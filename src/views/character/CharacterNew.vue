@@ -115,10 +115,8 @@ export default {
       this.onSubmitError(error);
     },
     onSubmitSuccess(data) {
-      const characterSave = data;
-      characterSave.forEach((item) => {
-        this.shouldShowNameDisclaimer = item.name;
-      });
+      const [characterSave] = data;
+      this.name = characterSave.name;
       this.shouldShowSuccessMessage = true;
       this.cleanForm();
     },
