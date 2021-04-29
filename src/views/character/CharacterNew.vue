@@ -15,7 +15,7 @@
           class="alert alert-primary alert-dismissible fade show"
           role="alert"
           v-if="shouldShowSuccessMessage">
-          Boa! Acabou de salvar o {{character.name}} com sucesso!
+          Boa! Acabou de salvar o {{ shouldShowNameDisclaimer }} com sucesso!
           <button
             type="button"
             class="btn-close"
@@ -87,6 +87,7 @@ export default {
     return {
       shouldShowSuccessMessage: false,
       shouldShowErrorMessage: false,
+      shouldShowNameDisclaimer: '',
       character: {
         name: '',
         miniBio: '',
@@ -114,9 +115,12 @@ export default {
       this.onSubmitError(error);
     },
     onSubmitSuccess(data) {
+      const characterSave = data;
+      characterSave.forEach((item) => {
+        this.shouldShowNameDisclaimer = item.name;
+      });
       this.shouldShowSuccessMessage = true;
       this.cleanForm();
-      console.log('save', data);
     },
     onSubmitError(error) {
       if (error) {
